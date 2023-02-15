@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
     protect_from_forgery
  
-
   
   # For all responses in this controller, return the CORS access control headers.
   
