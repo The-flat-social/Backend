@@ -10,7 +10,8 @@ class UsersController < ApplicationController
         user = User.find_by(id: params[:id])
         render json: user
       end
-      
+  
+
 
 
 #post request
@@ -18,6 +19,10 @@ class UsersController < ApplicationController
     def create 
         new_user = User.create(name: params[:name], email: params[:email], password: params[:password], username: params[:username], followers: params[:followers]) 
         render json: new_user
+    end
+
+    def create_comment
+        Comment.create(description: params[:description], likes: params[:likes], post_id: params[:post_id], user_id: params[:user_id])
     end
 
 
