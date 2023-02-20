@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
     resources :posts
+    resources :comments
     get 'sessions/create'
     get 'sessions/destroy'
     resources :users, only: [:create, :destroy, :index]
